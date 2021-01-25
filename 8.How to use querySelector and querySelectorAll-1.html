@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <body>
+            <section>
+                <article>
+                    <h3>article-1</h3>
+                    <p class="author">author-1</p>
+                    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis doloremque cumque impedit architecto officia, amet ducimus provident non, labore exercitationem sit illo beatae. Laudantium unde facere cupiditate a error cumque.</p>
+                </article>
+                <article class="special">
+                    <h3>article-2</h3>
+                    <p class="author">author-2</p>
+                    <p class="description">Ut obcaecati aliquid placeat nostrum explicabo odit veniam beatae nihil, neque optio. Architecto voluptates saepe hic aliquam est ducimus fuga iste odio, qui ratione soluta suscipit iusto ut et mollitia.</p>
+                </article>
+                <article class="special">
+                    <h3>article-3</h3>
+                    <p class="author">author-3</p>
+                    <p class="description">Id iste molestiae illum? Dolore, libero? In totam quas odio dolore non nobis nulla, laborum labore possimus, enim officiis voluptatum qui delectus adipisci sint sed. Aspernatur quidem necessitatibus ipsa excepturi.</p>
+                </article>
+            </section>
+
+
+            <script>
+                // console.log(document.querySelector('.special h3'));  // only h3 tag ta ke select kortw(and sudu first jeita pai sei ta dekhabe)
+                // console.log(document.querySelectorAll('.special h3'));   // Joto gula pai sob gula show korbe...Node er modde likes Array
+
+                var authors = document.querySelectorAll('.special h3');
+                for (i = 0; i < authors.length; i++) {
+                    var element = authors[i];
+                    element.innerHTML = 'Lekhok-' + (i + 1);
+                    element.style.backgroundColor = 'lightblue';
+                    element.style.margin = '20px';
+                }
+            </script>
+        </body>
+    </main>
+</body>
+
+</html>
