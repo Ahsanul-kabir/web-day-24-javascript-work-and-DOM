@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <body>
+            <h3>Exploring Dom</h3>
+            <section>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType">Learn about Node types</a>
+
+                <!-- here likes COMMENT is a type of node list -->
+            </section>
+            <section>
+                <article>
+                    <h3>article-1</h3>
+                    <p title='I am the most important Author' class="author" id="bestSeller">author-1</p>
+                    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis doloremque cumque impedit architecto officia, amet ducimus provident non, labore exercitationem sit illo beatae. Laudantium unde facere cupiditate a error cumque.</p>
+                </article>
+                <article class="special">
+                    <h3>article-2</h3>
+                    <p class="author">author-2</p>
+                    <p class="description">Ut obcaecati aliquid placeat nostrum explicabo odit veniam beatae nihil, neque optio. Architecto voluptates saepe hic aliquam est ducimus fuga iste odio, qui ratione soluta suscipit iusto ut et mollitia.</p>
+                </article>
+                <article class="special">
+                    <h3>article-3</h3>
+                    <p class="author">author-3</p>
+                    <p class="description">Id iste molestiae illum? Dolore, libero? In totam quas odio dolore non nobis nulla, laborum labore possimus, enim officiis voluptatum qui delectus adipisci sint sed. Aspernatur quidem necessitatibus ipsa excepturi.</p>
+                </article>
+            </section>
+
+            <script>
+                console.log(document.querySelectorAll(".special h3"));
+                console.log(document.getElementsByClassName('author'));
+
+                /* diffennt between HTMLCollection vs nodeList = nodeList dile tag cara o onno gula o pabo
+                but HTMLCollection e sudu html er element gula pabo */
+
+                console.log(document.querySelector('h3').setAttribute('title', 'You are the title'));
+
+                console.log(document.getElementById('bestSeller').setAttribute('title', 'Give me your autograph')); // chaned title before giveing in html tag
+
+
+                document.body.style.backgroundColor = 'lightgreen';
+                var authors = document.querySelectorAll('.special h3');
+                for (i = 0; i < authors.length; i++) {
+                    var element = authors[i];
+                    element.innerHTML = 'Lekhok-' + (i + 1);
+                    element.setAttribute('title', 'All are same Author');
+                    element.style.backgroundColor = 'lightblue';
+                    element.style.margin = '20px';
+                }
+            </script>
+        </body>
+    </main>
+</body>
+
+</html>
