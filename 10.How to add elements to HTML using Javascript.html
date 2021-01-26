@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <body>
+            <h3>Exploring Dom</h3>
+
+            <section>
+                <article id="first-article">
+                    <h3>article-1</h3>
+                    <p title='I am the most important Author' class="author" id="bestSeller">author-1</p>
+                    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis doloremque cumque impedit architecto officia, amet ducimus provident non, labore exercitationem sit illo beatae. Laudantium unde facere cupiditate a error cumque.</p>
+                </article>
+                <article class="special">
+                    <h3>article-2</h3>
+                    <p class="author">author-2</p>
+                    <p class="description">Ut obcaecati aliquid placeat nostrum explicabo odit veniam beatae nihil, neque optio. Architecto voluptates saepe hic aliquam est ducimus fuga iste odio, qui ratione soluta suscipit iusto ut et mollitia.</p>
+                </article>
+                <article class="special">
+                    <h3>article-3</h3>
+                    <p class="author">author-3</p>
+                    <p class="description">Id iste molestiae illum? Dolore, libero? In totam quas odio dolore non nobis nulla, laborum labore possimus, enim officiis voluptatum qui delectus adipisci sint sed. Aspernatur quidem necessitatibus ipsa excepturi.</p>
+                </article>
+                <article>
+                    <h3>Grocery List</h3>
+                    <ul id="gift-list">
+                        <li>gift item -1</li>
+                        <li>gift item -2</li>
+                        <li>gift item -3</li>
+                        <li>gift item -4</li>
+                    </ul>
+                </article>
+            </section>
+
+            <script>
+                // javascript diye new element add korar way
+                const article = document.getElementById('first-article');
+                const newParagraph = document.createElement('p');
+                newParagraph.innerHTML = 'This is added by Javascript';
+                article.appendChild(newParagraph);
+
+
+                // add one more gift item
+                const ulAdd = document.getElementById('gift-list');
+                const liAdd = document.createElement('li');
+                liAdd.innerHTML = 'Brand new Gift added by javascript';
+                ulAdd.appendChild(liAdd);
+
+                //way of view Child nodes
+                console.log(document.getElementById('gift-list').childNodes);
+                console.log(document.getElementById('first-article').childNodes);
+
+                //way of view Parent nodes
+                console.log(document.getElementById('gift-list').parentNode);
+            </script>
+        </body>
+    </main>
+</body>
+
+</html>
