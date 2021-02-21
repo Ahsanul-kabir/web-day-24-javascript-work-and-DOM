@@ -1,2 +1,2 @@
 console.log(80);
-debugger;
+debugger; // means code ke ei khane stop kore dibe
